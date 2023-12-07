@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-It defines unnittests for models/engine/db_storage.py.
-"""
-
+"""Defines unnittests for models/engine/db_storage.py."""
 import pep8
 import models
 import MySQLdb
