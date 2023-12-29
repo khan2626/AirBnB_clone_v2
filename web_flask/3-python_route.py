@@ -5,6 +5,7 @@ listening in port 0.0.0.0
 /: display “Hello HBNB!”
 /hbnb: display “HBNB”
 /c/<text>: display “C ” followed by the value of the text variable
+/python/<text>: display “Python ”, followed by the value of the text
 """
 from flask import Flask
 
@@ -27,6 +28,12 @@ def hbnb():
 def c(text=None):
     """ returns a string """
     return (f'C {text}', (text.replace("_" " ")))
+
+
+@app.route('/python/<text>')
+def python(text=None):
+    """ Returns an inputed string """
+    return (f'Python {text}', (text.replace("_" " ")))
 
 
 if __name__ == "__main__":
