@@ -3,6 +3,7 @@
 from flask import Flask, render_template
 from models import storage
 from models.state import State
+from models.city import City
 
 
 app = Flask(__name__)
@@ -18,7 +19,7 @@ def close(self):
 def cities_by_states():
     """Displays a html page with states and cities"""
     states = storage.all(State)
-    return render_template('8-cities_by_states.html', states=states)
+    return render_template('8-cities_by_states.html', Table="States", states=states)
 
 
 if __name__ == '__main__':
